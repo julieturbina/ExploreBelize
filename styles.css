@@ -1,0 +1,21 @@
+/* <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> */
+
+body{
+font-family: 'Satisfy', cursive;
+background-color: red;
+}
+
+
+.gameTitle{
+    text-align: Center;
+    color: darkblue;  
+    border-radius: 30%;
+    font-size: 50px; 
+}
+.name{
+    background-color: rgb(42, 197, 208);
+    color: white;
+    width: 200px;
+    height: 25px;
+    border-radius: 25px;
+}
