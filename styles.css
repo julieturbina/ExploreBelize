@@ -1,8 +1,14 @@
 /* <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> */
 
-body{
+.game{
 font-family: 'Satisfy', cursive;
-background-color: red;
+background-color: rgb(72, 119, 135);
+height: 800px;
+width: 100%;
+background-image: url("..belize-logo");
+
+background-repeat: no-repeat;
+
 }
 
 
@@ -12,10 +18,14 @@ background-color: red;
     border-radius: 30%;
     font-size: 50px; 
 }
-.name{
-    background-color: rgb(42, 197, 208);
+
+.winner {
+    color: gold ;
+}
+.start-button{
+    background-color: blue;
     color: white;
     width: 200px;
-    height: 25px;
+    height: 50px;
     border-radius: 25px;
 }
