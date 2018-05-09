@@ -11,56 +11,193 @@ console.log("Hi!!!");
 
 // ==================Bank of 50 questions=========
 
-// (function() {
-//     var questions = [{
-//       question: "When did Belize become independent?",
-//       answers: [1961, 1971, 1981],
-//       correctAnswer: 2
 
-//     }, {
-//         question: "What is Juliet's nickname?",
-//         answers: ["Jules", "Julie", "Jay"],
-//         correctAnswer: 0
-//     }, {
-//       question: "What is Jules",
-//       answers: ["Girl", "Boy", "Baby"],
-//       correctAnswer: 0
-//     }, {
-//       question: "Where is Jules?",
-//       answers: ["At the mall", "At Ironhack", "At home"],
-//       correctAnswer: 1
-//     }, {
-//       question: "What is Juliet's last name?",
-//       answers: ["Urbina", "Thomas", "Sylvestre"],
-//       correctAnswer: 0
-//     }];
-// });
+
+
+(function() {
+  var questions = [{
+    question: "When did Belize become independent?",
+    answers: [1961, 1971, 1981],
+    correctAnswer: 2
+
+  }, {
+      question: "What is Juliet's nickname?",
+      answers: ["Jules", "Julie", "Jay"],
+      correctAnswer: 0
+  }, {
+    question: "What is Jules",
+    answers: ["Girl", "Boy", "Baby"],
+    correctAnswer: 0
+  }, {
+    question: "Where is Jules?",
+    answers: ["At the mall", "At Ironhack", "At home"],
+    correctAnswer: 1
+  }, {
+    question: "What is Juliet's last name?",
+    answers: ["Urbina", "Thomas", "Sylvestre"],
+    correctAnswer: 0
+  }];
+  
+  // ======Start Game========
+
+   //Start game 
+   var quiz = $('#game'); 
+
+  // Start Question 
+  var questionCounter = 0; 
+
+  //Start Answer 
+  var selections = []; 
+
+  // Display initial question
+  
+  displayNext();
+
+// Register answer chosen to enable next button to function
+  
+  $('#next').on('click', function () {
+  if(quiz.is('playing')) {        
+  return false;
+  }
+    choose();
+
+  // If no answer selected, halt progress, pop-up = select answer
+    if (isNaN(selections[questionCounter])) {
+      alert('Please select an answer!');
+    } else {
+      questionCounter++;
+      displayNext();
+    }
+  });
+  
+  // Click handler for the 'back' button
+  $('#back').on('click', function () {
+
+    if(quiz.is('playing')) {
+      return false;
+    }
+    choose();
+    questionCounter--;
+    displayNext();
+  });
+  
+  // Click handler for the 'Start Over' button
+  $('#start').on('click', function () {
+  
+    if(quiz.is('playing')) {
+      return false;
+    }
+    questionCounter = 0;
+    selections = [];
+    displayNext();
+    $('#start').hide();
+  });
+  
+  // Animate buttons on hover
+  $('.button').on('mouseenter', function () {
+    $(this).addClass('active');
+  });
+  $('.button').on('mouseleave', function () {
+    $(this).removeClass('active');
+  });
+  
+  // Creates and returns the questions and 
+  // the answer selections
+  function createQuestionElement(index) {
+    var qElement = $('<div>', {
+      id: 'question'
+    });
     
-    // var questionCounter = 0; // question number
-    // var selections = []; //Answers
-    // var quiz = $('#game'); //Quiz game div object
+    var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+    qElement.append(header);
     
-                        // Display initial question
-    // displayNext();
+    var question = $('<p>').append(questions[index].question);
+    qElement.append(question);
     
-                        // Click handler for the 'next' button
-    // $('#next').on('click', function (e) {
-                        //   e.preventDefault();
+    var radioButtons = createRadios(index);
+    qElement.append(radioButtons);
+    
+    return qElement;
+  }
+  
+  // Creates a list of the answer choices as radio inputs
+  function createRadios(index) {
+    var radioList = $('<ul>');
+    var item;
+    var input = " ";
+    for (var i = 0; i < questions[index].answers.length*2; i++) {
+      item = $('<li>');
+      input = '<input type="radio" name="answer" value=' + i + ' />';
+      input += questions[index].answers
+      [i];
+      item.append(input);
+      radioList.append(item);
+    }
+    return radioList;
 
-// });
+    // Randomize questions//
+  //   function quizQuestionsIndex(){
+      //     // for questionIndexArray = [
+      //       for(var i = 0; i < array.length; i++){
+      //         questionIndexArray.push(Math.floor(Math.random()*10));
+      //       }
+      //     return quizIndexArray;
+  }
+  
+  // Reads the user selection and sends it to an array
+  function choose() {
+    selections[questionCounter] = +$('input[name="answer"]:checked').val();
+  }
+  
+  // Displays next requested element
+  function displayNext() {
+    quiz.fadeOut(function() {
+      $('#question').remove();
+      
+      if(questionCounter < questions.length){
+        var nextQuestion = createQuestionElement(questionCounter);
+        quiz.append(nextQuestion).fadeIn();
+        if (!(isNaN(selections[questionCounter]))) {
+          $('input[value='+selections[questionCounter]+']').prop('checked', true);
+        }
+        
+        // Controls display of 'back' button
+        if(questionCounter === 1){
+          $('#back').show();
+        } else if(questionCounter === 0){
+          
+          $('#back').hide();
+          $('#next').show();
+        }
+      }else {
+        var scoreElem = displayScore();
+        quiz.append(scoreElem).fadeIn();
+        $('#next').hide();
+        $('#back').hide();
+        $('#start').show();
+      }
+    });
+  }
+  
+  // Totals the score and returns a message to be displayed
+  function displayScore() {
+    var score = $('<p>',{id: 'question'});
+    
+    var numCorrect = 0;
+    for (var i = 0; i < selections.length; i++) {
+      if (selections[i] === questions[i].correctAnswer) {
+        numCorrect++;
+      }
+    }
+    
+    score.append('You got ' + numCorrect + ' questions out of ' +
+                 questions.length + ' correct!!!');
+    return score;
+    
+  }
+})();
 
 
-// 3. questions will be 10 random questions from the bank of questions below.
-
-// function quizQuestionsIndex(){
-//     // for questionIndexArray = [
-//       for(var i = 0; i < array.length; i++){
-//         questionIndexArray.push(Math.floor(Math.random()*10));
-//       }
-//     return quizIndexArray;
-//   }
-
-// =================
 
 
 //5. Manually score the questions answered correctly for 2 Players
