@@ -1,16 +1,19 @@
 /* <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> */
 
-.game{
-font-family: 'Satisfy', cursive;
-background-color: rgb(72, 119, 135);
-height: 800px;
-width: 100%;
-background-image: url("..belize-logo");
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
 
-background-repeat: no-repeat;
-
-}
-
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%; 
+    background-color:red;
+    /* background-image: url("..belize-logo"); */
+    font-family: 'Inknut Antiqua', serif,'Barlow', sans-serif;
+ }
 
 .gameTitle{
     text-align: Center;
@@ -28,4 +31,26 @@ background-repeat: no-repeat;
     width: 200px;
     height: 50px;
     border-radius: 25px;
+    position: center;
+}
+
+.score-board {
+    /* background-image: ("../belize-map.jpg"); */
+    background-color: white;
+    position: right;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.playerName{
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+}
+.questions{
+    font-size: 50px;
+    padding-left: 100px;
+}
+.answers{
+    font-size: 20px;
 }

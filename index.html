@@ -4,32 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Inknut+Antiqua" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Belize</title>
 </head>
 <body>
 
-        <div>
-                <h1 class="gameTitle">Explore Belize</h1>
-        </div> 
-        <div>
-                <button class="start-button"><h2>Start Game</h2></button>
-        </div> 
+    <header>
 
-    <!-- =====score keeper======== -->
+            <!-- =====score keeper======== -->
+        <div class="score-board">
+                <h1><span id="p1Display">0</span> TO <span id="p2Display">0</span></h1>
+                <!-- <p>Play to<span>10</span></p>
+                <input type="number"> -->
+                <button id="p1"> Player One</button>
+                <button id="p2">Player Two</button>
+                <button id="reset">Reset</button>
+        </div>
+            
         <div>
-            <h1><span id="p1Display">0</span> TO <span id="p2Display">0</span></h1>
-            <!-- <p>Play to<span>10</span></p>
-            <input type="number"> -->
-            <button id="p1"> Player One</button>
-            <button id="p2">Player Two</button>
-            <button id="reset">Reset</button>
+                    <h1 class="gameTitle">Explore Belize</h1>
+        </div> 
+            
+        <div>
+                    <button class="start-button"><h2>Start Game</h2></button>
+        </div> 
+    </header>
+
+        <form>
+            First name:<br>
+            <input class="playerName"><br>
+            <!-- name="player firstname" -->
+        </form> 
+
+        <div class ="quizQuestions">
+               			<!-- question 1 -->
+			<p class="question">1. What year did Belize become independent?</p>
+            
+            <ul class="answers">
+			<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">1971</label><br/>
+			<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">1981</label><br/>
+			<input type="radio" name="q1" value="c" id="q1c"><label for="q1c">1991</label><br/>
+			</ul>
+			
+			<!-- question 2 -->
+			<p class="question">2. How many districts are in Belize?</p>
+            
+            <ul class="answers">
+			<input type="radio" name="q2" value="a" id="q2a"><label for="q2a">5</label><br/>
+			<input type="radio" name="q2" value="b" id="q2b"><label for="q2b">6</label><br/>
+			<input type="radio" name="q2" value="c" id="q2c"><label for="q2c">7</label><br/>
+            </ul>
         </div>
 
-  
 
-  
-    <div class="game">S</div>
+    
+
+    
+
+
+        <!---Game Over - Calculate Score--> 
+
+        <div>
+      
+        <input id = "calculateScore" type = "button" value = "Game Over" onclick = "calculateScore();">
+
+        </div>
 <script src="styles.js"></script>
 </body>
 </html>
