@@ -137,7 +137,21 @@ html {
     color: gold ;
 }
 
-#px3{
+#p1{
+    background-color: rgb(0, 251, 255, 0.5);
+    height: 30px;
+    width: 80px;
+    border-radius: 25%;
+    
+}
+#p2{
+    background-color: rgb(0, 251, 255, 0.5);
+    height: 30px;
+    width: 80px;
+    border-radius: 25%;
+    
+}
+#reset{
     background-color: rgb(0, 251, 255, 0.5);
     height: 30px;
     width: 80px;
@@ -206,4 +220,12 @@ html {
     width: 150px; 
     border-radius: 15%;  
  } 
-  
+ .blueFish{
+    padding-left: 399px;
+    padding-bottom: 300px;
+
+
+ }
+
+ /* =============== */
+ 
