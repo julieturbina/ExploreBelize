@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Inknut+Antiqua" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body class="player2">
+
+         <!-- =====score keeper======== -->
+         <div class="score-board">
+                <h1><span id="p1Display">0</span> VS <span id="p2Display">0</span></h1>
+                <!-- <p>Play to<span>10</span></p>
+                <input type="number"> -->
+                <button id="px3"> Player One</button>
+                <button id="px3">Player Two</button>
+                <button id="px3">Reset</button>
+        </div>
+        <div class="mPbutton">
+               <button class="backMain"><a href="index.html"> Main Page</a></button>
+        </div>
+
+             <!-- <form>
+            <!- First name:<br> -->
+            <!-- <input class="playerName"><br> -->
+            <!-- name="player firstname" -->
+        <!-- </form>  --> 
+
+    <h1 class="title">Explore Belize 2 Players </h1>
+  
+    <ol>
+        <li>Who is the Head of state of Belize?</li>
+                <ul>
+                    <li><input type="pTbutton" value="Queen Elizabeth II" id="q1b1"class="pTbutton" onclick="answerTrue()"></li>
+                    <li><input type="pFbutton" value="The Prime Minister" id="q1b2" class="pFbutton" onclick="answerFalse()"></li>
+                </ul>
+    
+        <li>What year did Belize become a crown Colony?</li>
+                <ul>
+                    <li><input type="pFbutton" value="1981" id="q2b1" class="pFbutton" onclick="answerFalse()"></li>
+                    <li><input type="pTbutton" value="1871" id="q2b2" class="pTbutton" onclick="answerTrue()"></li>
+                </ul>
+        <li>What year did Belize become a ?</li>
+                <ul>
+                        <li><input type="pTbutton" value="1" id="q2b1" class="pTbutton" onclick="answerTrue()"></li>
+                        <li><input type="pFbutton" value="4" id="q2b2" class="pFbutton" onclick="answerFalse()"></li>
+                        
+                 </ul>
+        <li>What year did Belize become b?</li>
+                <ul>
+                        <li><input type="pTbutton" value="1" id="q2b1" class="pTbutton" onclick="answerTrue()"></li>
+                        <li><input type="pFbutton" value="4" id="q2b2" class="pFbutton" onclick="answerFalse()"></li>
+                        <li class="ramble">Who is the Head of state of Belize?</li>
+                </ul>
+        <li>What year did Belize become c?</li>
+                <ul>
+                        <li><input type="pFbutton2" value="4" id="q2b1" class="pFbutton" onclick="answerFalse()"></li>
+                        <li><input type="pTbutton" value="1" id="q2b2" class="pTbutton" onclick="answerTrue()"></li>
+                        <li class="ramble">Who is the Head of state of Belize?</li>
+                </ul>
+        
+                
+    </ol>               
+        
+    <div>
+      
+            <input id = "calc" type = "button" value = "Game Over" onclick = "calculateScore();">
+    
+    </div> 
+  
+   
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src='questions.json'></script> -->
+    <script type="text/javascript" src="styles.js"></script>	
+</body>
+</html>

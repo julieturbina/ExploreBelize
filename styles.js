@@ -1,5 +1,11 @@
 // Potential questions and answers
-console.log("Hi!!!");
+console.log("Hi!!!!!!!!!!!!!!!!");
+
+//Main Page//
+var canvas = document.querySelector('canvas');
+var c;
+console.log(canvas);
+
 
 
 
@@ -11,24 +17,14 @@ console.log("Hi!!!");
 
 // ==================Bank of 50 questions=========
 
-
-
-
 (function() {
   var questions = [{
-    question: "When did Belize become independent?",
-    answers: [1961, 1971, 1981],
-    correctAnswer: 2
 
-  }, {
       question: "What is Juliet's nickname?",
       answers: ["Jules", "Julie", "Jay"],
       correctAnswer: 0
   }, {
-    question: "What is Jules",
-    answers: ["Girl", "Boy", "Baby"],
-    correctAnswer: 0
-  }, {
+
     question: "Where is Jules?",
     answers: ["At the mall", "At Ironhack", "At home"],
     correctAnswer: 1
@@ -59,7 +55,7 @@ console.log("Hi!!!");
   if(quiz.is('playing')) {        
   return false;
   }
-    choose();
+  choose();
 
   // If no answer selected, halt progress, pop-up = select answer
     if (isNaN(selections[questionCounter])) {
@@ -125,7 +121,7 @@ console.log("Hi!!!");
     var radioList = $('<ul>');
     var item;
     var input = " ";
-    for (var i = 0; i < questions[index].answers.length*2; i++) {
+    for (var i = 0; i < questions[index].answers.length; i++) {
       item = $('<li>');
       input = '<input type="radio" name="answer" value=' + i + ' />';
       input += questions[index].answers
@@ -135,13 +131,7 @@ console.log("Hi!!!");
     }
     return radioList;
 
-    // Randomize questions//
-  //   function quizQuestionsIndex(){
-      //     // for questionIndexArray = [
-      //       for(var i = 0; i < array.length; i++){
-      //         questionIndexArray.push(Math.floor(Math.random()*10));
-      //       }
-      //     return quizIndexArray;
+ 
   }
   
   // Reads the user selection and sends it to an array
@@ -153,8 +143,12 @@ console.log("Hi!!!");
   function displayNext() {
     quiz.fadeOut(function() {
       $('#question').remove();
-      
+
+       // ???Randomize questions X 3 ???//
+
       if(questionCounter < questions.length){
+        // for(var i = 0; i < array.length; i++){
+        // questionIndexArray.push(Math.floor(Math.random()*3));
         var nextQuestion = createQuestionElement(questionCounter);
         quiz.append(nextQuestion).fadeIn();
         if (!(isNaN(selections[questionCounter]))) {
@@ -196,6 +190,10 @@ console.log("Hi!!!");
     
   }
 })();
+
+
+// ========  2 Player Game =============
+
 
 
 
@@ -252,7 +250,7 @@ resetButton.addEventListener("click", function(){
     });
  
 function calculateScore(){
-    alert("Explore Belize");
+    alert("Thank you for playing!!!");
 }
 
 // 6.  Compare the scores for game 2 to announce the winner! No customized message will be issued as a total of 19 questions will be issued and as soon as a player scores 10, the game will end.
@@ -266,8 +264,21 @@ function calculateScore(){
 // } else{
 //     Come to explore Belize
 
-// ======================
+// ========Answers========
 
-
+ function answerFalse(){
+  wrongAnswer(); 
+ }
+ function answerTrue(){
+  rightAnswer(); 
+ }
+ 
+ /*right-or-wrong answer event handlers*/
+ function wrongAnswer(){
+  alert('your answer was incorrect!') 
+ }
+ function rightAnswer(){
+   alert('you answered correctly!')
+ }
  
 

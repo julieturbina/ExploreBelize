@@ -6,86 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Barlow|Inknut+Antiqua" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Explore Belize Quiz</title>
+            canvas{
+                border:0;
+                background:red;
+            }
+            body{
+                margin:0;
+            }
+    <title>Explore Belize Game</title>
 </head>
 
-<body>
+<body class="mainPage">
 
     <header>
-
-            <!-- =====score keeper======== -->
-        <div class="score-board">
-                <h1><span id="p1Display">0</span> TO <span id="p2Display">0</span></h1>
-                <!-- <p>Play to<span>10</span></p>
-                <input type="number"> -->
-                <button id="p1"> Player One</button>
-                <button id="p2">Player Two</button>
-                <button id="reset">Reset</button>
-        </div>
-            
-        <div>
-                    <h1 class="gameTitle">Explore Belize</h1>
-        </div> 
-            
-        <!-- <div>
-                    <button class="start-button"><h2>Start Game</h2></button>
-        </div>  -->
+            <div>
+                    <h1 class="gameTitle">Explore Belize Game</h1>
+            </div>             
     </header>
-
-        <!-- <form>
-            First name:<br>
-            <input class="playerName"><br>
-            <!-- name="player firstname" -->
-        </form>  -->
-
-        <!-- question 1 -->
-
-        <!-- <div class ="quizQuestions"> -->
-               			
-			<!-- <p class="question">1. What year did Belize become independent?</p>
-            
-            <ul class="answers">
-			<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">1971</label><br/>
-			<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">1981</label><br/>
-			<input type="radio" name="q1" value="c" id="q1c"><label for="q1c">1991</label><br/>
-			</ul> -->	
-        <!-- </div>  -->
-      
-    	<div id="container">
-			<div id="title">
-				<h1>Jules' Game Project 1a - Explore Belize Quiz</h1>
-			</div>
-   			<br/>
-  			<div id="game"></div>
-    		<div class="button" id="next"><a href="#">Next</a></div>
-    		<div class="button" id="back"><a href="#">Back</a></div>
-    		<div class="button" id="start"> <a href="#">Start</a></div>
-    	</div>
-    
-         
-    
-
-        <!---Game Over - Calculate Score--> 
-
-        <div>
-      
-        <input id = "calculateScore" type = "button" value = "Game Over" onclick = "calculateScore();">
-
+       
+        <canvas></canvas>
+   
+        <div class="playerOne">
+        <a href="game-1player.html"> Play Game = 1 Player</a>
         </div>
+        <div class="playerTwo">
+        <a href="game-2players.html"> Play Game = 2 Players</a>
+        </div>
+         
+        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <!-- <script type="text/javascript" src='questions.json'></script> -->
-        <script type="text/javascript" src="styles.js"></script>
-    
+        <script type="text/javascript" src="styles.js"></script>	
 
-
-	
-	<body>
-	
-
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<!-- <script type="text/javascript" src='questions.json'></script> -->
-		<script type="text/javascript" src="game1b.js"></script>
-	</body>
+    </body>
+    <footer>
+        <div>
+            <a href="http://www.belizetourismboard.org/">Belize Tourism Board</a>
+        </div>
+    </footer>
 </html>
 
 
