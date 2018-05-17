@@ -1,5 +1,22 @@
 // Potential questions and answers
-console.log("Hi!!!!!!!!!!!!!!!!");
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+      this.sound.play();
+  };
+  this.stop = function(){
+      this.sound.pause();
+  };
+}
+var myMusic;
+myMusic = new sound("The-Magic-Box.mp3");    
+myMusic.play();
 
 //Main Page//
 var canvas = document.querySelector('canvas');
@@ -16,23 +33,42 @@ console.log(canvas);
 
 
 // ==================Bank of 50 questions=========
-
 (function() {
   var questions = [{
 
-      question: "What is Juliet's nickname?",
-      answers: ["Jules", "Julie", "Jay"],
+      question: "What year did Belize gain Independence?",
+      answers: ["1981", "1961", "1931"],
       correctAnswer: 0
   }, {
 
-    question: "Where is Jules?",
-    answers: ["At the mall", "At Ironhack", "At home"],
+    question: "Where is Belize located?",
+    answers: ["South America", "Central America", "North America"],
     correctAnswer: 1
   }, {
-    question: "What is Juliet's last name?",
-    answers: ["Urbina", "Thomas", "Sylvestre"],
-    correctAnswer: 0
-  }];
+    question: "What civilization occupied Belize prior to the 15th century?",
+    answers: ["Olmec", "Aztec", "Maya"],
+    correctAnswer: 2
+  },{
+
+    question: "What animal was discovered in Belize in the 1920s?",
+    answers: ["Jaguar", "Tapir", "Iguana"],
+    correctAnswer: 1
+},{
+
+  question: "Where was the Mitchell-Hedges crystal Skull of Lubaantun?",
+  answers: ["Jules", "Julie", "Jay"],
+  correctAnswer: 0
+},{
+
+  question: "bWhat is Juliet's nickname?",
+  answers: ["Jules", "Julie", "Jay"],
+  correctAnswer: 0
+},{
+
+  question: "cWhat is Juliet's nickname?",
+  answers: ["Jules", "Julie", "Jay"],
+  correctAnswer: 0
+}];
   
   // ======Start Game========
 
@@ -96,6 +132,13 @@ console.log(canvas);
   $('.button').on('mouseleave', function () {
     $(this).removeClass('active');
   });
+
+  $('.backMain').on('mouseenter', function () {
+    $(this).addClass('active');
+  });
+  $('.backMain').on('mouseleave', function () {
+    $(this).removeClass('active');
+  });
   
   // Creates and returns the questions and 
   // the answer selections
@@ -145,10 +188,14 @@ console.log(canvas);
       $('#question').remove();
 
        // ???Randomize questions X 3 ???//
+       var questionIndexArray = [];
 
+      //  for(var i = 0; i < questions.length; i++){
+         var index = Math.floor(Math.random() * questions.length);
+         console.log("index is: ", index)
+         console.log("heyyyy: ",questionIndexArray )
+         questionIndexArray.push(questions[index]);
       if(questionCounter < questions.length){
-        // for(var i = 0; i < array.length; i++){
-        // questionIndexArray.push(Math.floor(Math.random()*3));
         var nextQuestion = createQuestionElement(questionCounter);
         quiz.append(nextQuestion).fadeIn();
         if (!(isNaN(selections[questionCounter]))) {
@@ -170,6 +217,7 @@ console.log(canvas);
         $('#back').hide();
         $('#start').show();
       }
+    // }
     });
   }
   
@@ -275,10 +323,10 @@ function calculateScore(){
  
  /*right-or-wrong answer event handlers*/
  function wrongAnswer(){
-  alert('your answer was incorrect!') 
+  alert('your answer was incorrect!'); 
  }
  function rightAnswer(){
-   alert('you answered correctly!')
+   alert('you answered correctly!');
  }
  
 

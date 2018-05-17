@@ -1,4 +1,4 @@
-/* Main Page */
+/* Main Page, Page-1 Player, Page 2-Player */
 
 .mainPage{
 background-image: url("../game-1a/island.jpg");
@@ -24,21 +24,24 @@ padding-left: 50px;
 padding-top: 100px;
 
 }
-
+#p1Footer{
+background-color: aqua;
+}
 body {
     font-family: 'Inknut Antiqua', serif,'Barlow', sans-serif;
 }
 
+
 #container {
     width:30%;
     margin:auto;
-    padding: 0 25px 40px 25px;
-    background-color: rgba(3, 17, 213, 0.974);
-    border:10px solid #d0faff;
+    padding: 25px 25px 40px 25px;
+    /* background-color: rgba(3, 17, 213, 0.974); */ 
+    border:10px solid aqua, 0.1;
     border-radius:25px;
-    color: rgb(242, 234, 6);
+    color: yellow;
     font-weight: bold;
-    box-shadow: 5px 25px 100px rgb(255, 255, 255);
+    /* box-shadow: 5px 25px 100px rgb(255, 255, 255); */
 }
 
 .title {
@@ -52,7 +55,7 @@ body {
 
 .button {
     border:4px solid;
-    border-radius:50px;
+    border-radius:25px;
     width: 120px;
     padding-left:5px;
     padding-right: 5px;
@@ -93,10 +96,13 @@ ul {
 }
 
 
-html {
+/* html {
     margin: 0px;
     height: 100%;
     width: 100%;
+} */
+.playerTwo{
+    margin-bottom: -9px;
 }
 
 /* ======================== */
@@ -168,7 +174,15 @@ html {
     width: 150px; 
     border-radius: 15%;   
 }
-
+.backMain.active{
+    background-color: rgba(10, 31, 189, 0.5);
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+    height: 75px;
+    width: 150px; 
+    border-radius: 15%;   
+}
 
 /* =================== */
 
@@ -201,7 +215,7 @@ html {
     border: none;
       color: white;
       text-align: center;
-      text-decoration: none
+      text-decoration: none;
      font-family: comic sans ms;
     font-size: 16px;
   }
@@ -220,12 +234,24 @@ html {
     width: 150px; 
     border-radius: 15%;  
  } 
- .blueFish{
-    padding-left: 399px;
-    padding-bottom: 300px;
+.blueFish{
+padding-left: 550px;
+padding-top: 50px;
+opacity: 0.5;
+filter: alpha(opacity=25);
 
+}
 
- }
+.foot{
+background-color: rgb(41, 255, 251, 0.2);
+margin: 0px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+margin-left: -7px;
+margin-right: -7px;
+
+ } 
 
  /* =============== */
  
