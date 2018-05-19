@@ -16,7 +16,8 @@ background-size: cover;
 background-image: url("../game-1a/blue-hole.jpeg");
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover
+background-size: cover;
+height: 600px;
 }
 
 .mPbutton{

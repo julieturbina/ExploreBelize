@@ -55,18 +55,24 @@ console.log(canvas);
     correctAnswer: 1
 },{
 
-  question: "Where was the Mitchell-Hedges crystal Skull of Lubaantun?",
-  answers: ["Jules", "Julie", "Jay"],
-  correctAnswer: 0
+  question: "Where was the Mitchell-Hedges crystal Skull discovered ?",
+  answers: ["Lamanai", "Lubaantun", "Cahal Pech"],
+  correctAnswer: 1
 },{
 
-  question: "bWhat is Juliet's nickname?",
-  answers: ["Jules", "Julie", "Jay"],
-  correctAnswer: 0
+  question: " Where was the jade head discovered in Belize?",
+  answers: ["Xunantunich", "Caracol", "Altun Ha in 1968"],
+  correctAnswer: 2
 },{
 
-  question: "cWhat is Juliet's nickname?",
-  answers: ["Jules", "Julie", "Jay"],
+  question: " What Mayan city was inhabited for more than two thousand years?",
+  answers: ["Lubaantun", "Lamanai", "Altun Ha"],
+  correctAnswer: 1
+},{  
+
+
+  question: "What is the highest honour awarded by the government of Belize?",
+  answers: ["Order of the National Hero", "Order of Belize", "Order of Distinction"],
   correctAnswer: 0
 }];
   
@@ -182,7 +188,7 @@ console.log(canvas);
     selections[questionCounter] = +$('input[name="answer"]:checked').val();
   }
   
-  // Displays next requested element
+  // Displays next requested question
   function displayNext() {
     quiz.fadeOut(function() {
       $('#question').remove();
@@ -192,8 +198,8 @@ console.log(canvas);
 
       //  for(var i = 0; i < questions.length; i++){
          var index = Math.floor(Math.random() * questions.length);
-         console.log("index is: ", index)
-         console.log("heyyyy: ",questionIndexArray )
+         console.log("index is: ", index);
+         console.log("heyyyy: ",questionIndexArray);
          questionIndexArray.push(questions[index]);
       if(questionCounter < questions.length){
         var nextQuestion = createQuestionElement(questionCounter);
