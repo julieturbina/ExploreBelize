@@ -21,6 +21,7 @@ height: 600px;
 }
 
 .mPbutton{
+    color: black;
 padding-left: 50px;
 padding-top: 100px;
 
@@ -87,21 +88,12 @@ ul {
     margin: 0;
 }
 
-#back {
-    display:none;
-}
 
 #start {
     display:none;
 
 }
 
-
-/* html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-} */
 .playerTwo{
     margin-bottom: -9px;
 }
@@ -145,38 +137,40 @@ ul {
 }
 
 #p1{
-    background-color: rgb(0, 251, 255, 0.5);
-    height: 30px;
-    width: 80px;
+    background-color: rgba(0, 255, 251, 0.9);
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
     border-radius: 25%;
     
 }
 #p2{
-    background-color: rgb(0, 251, 255, 0.5);
-    height: 30px;
-    width: 80px;
+    background-color: rgba(0, 255, 251, 0.9);
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
     border-radius: 25%;
     
 }
 #reset{
-    background-color: rgb(0, 251, 255, 0.5);
-    height: 30px;
-    width: 80px;
+    background-color: rgba(0, 255, 251, 0.8);
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
     border-radius: 25%;
     
 }
 
 .backMain{
-    background-color: rgba(10, 31, 189, 0.5);
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
+    background-color:rgb(0, 255, 251, 0.9);
+    font-size: 25px;
+    text-decoration:none;
     height: 75px;
     width: 150px; 
     border-radius: 15%;   
 }
 .backMain.active{
-    background-color: rgba(10, 31, 189, 0.5);
+    /* background-color: rgba(10, 31, 189, 0.5); */
     color: red;
     font-size: 20px;
     text-decoration: none;
@@ -201,11 +195,14 @@ ul {
      font-family: comic sans ms; 
      font-size: 16px;
   }
-  .pTbutton:hover { activated
+  
+  /*activated */ 
+
+  .pTbutton:hover { 
    color: #000000; 
     background-color: #00eeff;
-  box-shadow: 0 12px 16px 0 rgba(0,0,3,0.24), 0 19px 50px 0 rgba(0,0,4,0.19);
   } 
+
   /*false button  */
   
   .pFbutton {
@@ -220,10 +217,12 @@ ul {
      font-family: comic sans ms;
     font-size: 16px;
   }
-  .pFbutton:hover { activated
+
+  /* activated */
+
+  .pFbutton:hover { 
    color: #000000; 
     background-color: red; 
-  box-shadow: 0 12px 16px 0 rgba(0,0,3,0.24), 0 19px 50px 0 rgba(0,0,4,0.19);
   }
   
  #calc{

@@ -55,13 +55,13 @@ console.log(canvas);
     correctAnswer: 1
 },{
 
-  question: "Where was the Mitchell-Hedges crystal Skull discovered ?",
+  question: "Where was the Mitchell-Hedges crystal Skull discovered?",
   answers: ["Lamanai", "Lubaantun", "Cahal Pech"],
   correctAnswer: 1
 },{
 
   question: " Where was the jade head discovered in Belize?",
-  answers: ["Xunantunich", "Caracol", "Altun Ha in 1968"],
+  answers: ["Xunantunich", "Caracol", "Altun Ha"],
   correctAnswer: 2
 },{
 
@@ -71,9 +71,75 @@ console.log(canvas);
 },{  
 
 
-  question: "What is the highest honour awarded by the government of Belize?",
+  question: " What is the highest honour awarded by the government of Belize?",
   answers: ["Order of the National Hero", "Order of Belize", "Order of Distinction"],
   correctAnswer: 0
+},{
+
+question: " What was the name of Belize before it was changed in 1973?",
+answers: ["Saint George", "British Honduras", "New Britain"],
+correctAnswer: 1
+
+},{
+
+  question: " What tree appears on the Belize flag?",
+  answers: ["Mangrove", "Mahagony", "Ziricote"],
+  correctAnswer: 1
+
+},{
+
+  question: " Belize shares a land border with which country?",
+  answers: ["Honduras", "Mexico", "Nicaragua"],
+  correctAnswer: 1
+
+},{
+
+  question: "  What is the name of the largest sinkhole in the world?",
+  answers: ["The blue Hole ", "The Big Hole", "The Crater"],
+  correctAnswer: 0
+
+},{
+
+  question: " Which is the capital of Belize?",
+  answers: ["Belize City", "Belmopan", "Belama"],
+  correctAnswer: 1
+
+},{
+
+  question: " When is Independence Day in Belize??",
+  answers: ["10 September", "21 September", "15 September"],
+  correctAnswer: 1
+
+},{
+
+  question: " What date is Baron Bliss Day in Belize?",
+  answers: ["	9 March", "1 April", "10 September"],
+  correctAnswer: 0
+
+},{
+
+  question: " Who was the first Governor General of independent Belize??",
+  answers: ["Colville Young", "George Price", "Minita Gordon"],
+  correctAnswer: 2
+
+},{
+
+  question: " What is the official language of Belize",
+  answers: ["Spanish", "French", "English"],
+  correctAnswer: 2
+
+},{
+
+  question: " W?",
+  answers: ["Saint George", "British Honduras", "New Britain"],
+  correctAnswer: 1
+
+},{
+
+  question: " W ?",
+  answers: ["Saint George", "British Honduras", "New Britain"],
+  correctAnswer: 1
+
 }];
   
   // ======Start Game========
@@ -86,6 +152,15 @@ console.log(canvas);
 
   //Start Answer 
   var selections = []; 
+
+  //Questions array
+  //var questionIndexArray = [];
+
+  //QUESTION Limit
+
+  const ROUNDS = 5;
+  const answeredQuestions = [];
+
 
   // Display initial question
   
@@ -148,12 +223,12 @@ console.log(canvas);
   
   // Creates and returns the questions and 
   // the answer selections
-  function createQuestionElement(index) {
+  function createQuestionElement(index, questionCounter) {
     var qElement = $('<div>', {
       id: 'question'
     });
     
-    var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+    var header = $('<h2>Question ' + (questionCounter + 1) + ':</h2>');
     qElement.append(header);
     
     var question = $('<p>').append(questions[index].question);
@@ -194,17 +269,28 @@ console.log(canvas);
       $('#question').remove();
 
        // ???Randomize questions X 3 ???//
-       var questionIndexArray = [];
 
       //  for(var i = 0; i < questions.length; i++){
+
+      /*
+        random = Math.floor(Math.random()*y.length)
+        if (random > -1) {
+          y.splice(random, 1);
+        }
+      */
+      
          var index = Math.floor(Math.random() * questions.length);
-         console.log("index is: ", index);
-         console.log("heyyyy: ",questionIndexArray);
-         questionIndexArray.push(questions[index]);
-      if(questionCounter < questions.length){
-        var nextQuestion = createQuestionElement(questionCounter);
+        //  console.log("index is: ", index);
+         //console.log("heyyyy: ",questionIndexArray);
+         //console.log("questionCounter ", questionCounter);
+         console.log("questions left", index, questions);
+         //questionIndexArray.push(questions[index]);
+      if(questionCounter < ROUNDS){
+        var nextQuestion = createQuestionElement(index, questionCounter);
         quiz.append(nextQuestion).fadeIn();
+        answeredQuestions.push(questions.splice(index, 1)[0]);
         if (!(isNaN(selections[questionCounter]))) {
+          // debugger;
           $('input[value='+selections[questionCounter]+']').prop('checked', true);
         }
         
@@ -229,17 +315,21 @@ console.log(canvas);
   
   // Totals the score and returns a message to be displayed
   function displayScore() {
+    console.log(selections);
+    console.log(answeredQuestions);
     var score = $('<p>',{id: 'question'});
     
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
-      if (selections[i] === questions[i].correctAnswer) {
+      console.log('selection ', selections[i]);
+      console.log('question ', answeredQuestions[i]);
+      if (selections[i] === answeredQuestions[i].correctAnswer) {
         numCorrect++;
       }
     }
     
     score.append('You got ' + numCorrect + ' questions out of ' +
-                 questions.length + ' correct!!!');
+                 ROUNDS + ' correct!!!');
     return score;
     
   }
