@@ -1,27 +1,27 @@
-// Potential questions and answers
+// // Potential questions and answers
 
-function sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("preload", "auto");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  document.body.appendChild(this.sound);
-  this.play = function(){
-      this.sound.play();
-  };
-  this.stop = function(){
-      this.sound.pause();
-  };
-}
-var myMusic;
-myMusic = new sound("The-Magic-Box.mp3");    
-myMusic.play();
+// function sound(src) {
+//   this.sound = document.createElement("audio");
+//   this.sound.src = src;
+//   this.sound.setAttribute("preload", "auto");
+//   this.sound.setAttribute("controls", "none");
+//   this.sound.style.display = "none";
+//   document.body.appendChild(this.sound);
+//   this.play = function(){
+//       this.sound.play();
+//   };
+//   this.stop = function(){
+//       this.sound.pause();
+//   };
+// }
+// var myMusic;
+// myMusic = new sound("The-Magic-Box.mp3");    
+// myMusic.play();
 
-//Main Page//
-var canvas = document.querySelector('canvas');
-var c;
-console.log(canvas);
+// //Main Page//
+// var canvas = document.querySelector('canvas');
+// var c;
+// console.log(canvas);
 
 
 
@@ -60,85 +60,147 @@ console.log(canvas);
   correctAnswer: 1
 },{
 
-  question: " Where was the jade head discovered in Belize?",
+  question: "Where was the jade head discovered in Belize?",
   answers: ["Xunantunich", "Caracol", "Altun Ha"],
   correctAnswer: 2
 },{
 
-  question: " What Mayan city was inhabited for more than two thousand years?",
+  question: "What Mayan city was inhabited for more than two thousand years?",
   answers: ["Lubaantun", "Lamanai", "Altun Ha"],
   correctAnswer: 1
 },{  
 
 
-  question: " What is the highest honour awarded by the government of Belize?",
+  question: "What is the highest honour awarded by the government of Belize?",
   answers: ["Order of the National Hero", "Order of Belize", "Order of Distinction"],
   correctAnswer: 0
 },{
 
-question: " What was the name of Belize before it was changed in 1973?",
+question: "What was the name of Belize before it was changed in 1973?",
 answers: ["Saint George", "British Honduras", "New Britain"],
 correctAnswer: 1
 
 },{
 
-  question: " What tree appears on the Belize flag?",
-  answers: ["Mangrove", "Mahagony", "Ziricote"],
+  question: "What tree appears on the Belize flag?",
+  answers: ["Mangrove", "Mahogany", "Ziricote"],
   correctAnswer: 1
 
 },{
 
-  question: " Belize shares a land border with which country?",
+  question: "Belize shares a land border with which country?",
   answers: ["Honduras", "Mexico", "Nicaragua"],
   correctAnswer: 1
 
 },{
 
-  question: "  What is the name of the largest sinkhole in the world?",
-  answers: ["The blue Hole ", "The Big Hole", "The Crater"],
+  question: "What is the name of the largest sinkhole in the world?",
+  answers: ["The Blue Hole ", "The Big Hole", "The Crater"],
   correctAnswer: 0
 
 },{
 
-  question: " Which is the capital of Belize?",
+  question: "Which is the capital of Belize?",
   answers: ["Belize City", "Belmopan", "Belama"],
   correctAnswer: 1
 
 },{
 
-  question: " When is Independence Day in Belize??",
+  question: "When is Independence Day in Belize??",
   answers: ["10 September", "21 September", "15 September"],
   correctAnswer: 1
 
 },{
 
-  question: " What date is Baron Bliss Day in Belize?",
+  question: "What date is Baron Bliss Day in Belize?",
   answers: ["	9 March", "1 April", "10 September"],
   correctAnswer: 0
 
 },{
 
-  question: " Who was the first Governor General of independent Belize??",
+  question: "Who was the first Governor General of independent Belize??",
   answers: ["Colville Young", "George Price", "Minita Gordon"],
   correctAnswer: 2
 
 },{
 
-  question: " What is the official language of Belize",
+  question: "What is the official language of Belize",
   answers: ["Spanish", "French", "English"],
   correctAnswer: 2
 
 },{
 
-  question: " W?",
-  answers: ["Saint George", "British Honduras", "New Britain"],
+  question: "What year was the crystal skull discovered?",
+  answers: ["1946", "1924", "1865"],
   correctAnswer: 1
 
 },{
 
-  question: " W ?",
-  answers: ["Saint George", "British Honduras", "New Britain"],
-  correctAnswer: 1
+  question: "What year was the Jade Head discovered?",
+  answers: ["1868", "1928", "1968"],
+  correctAnswer: 2
+
+},{
+
+question: "Who were the Europeans that successfully settled Belize?",
+answers: ["Spanish", "French", "British"],
+correctAnswer: 2
+
+},{
+
+  question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
+answers: ["Sugarcane", "Mahogany", "Logwood"],
+correctAnswer: 2
+
+},{
+
+question: "After logwood declined, the settlers in Belize harvested what other product?",
+answers: ["Sugarcane", "Mahogany", "Logwood"],
+correctAnswer: 1
+
+},{
+
+question: "When did the Spanish last attack the  British settlers in Belize?",
+answers: ["10 September 1925", "10 September 1961", "10 September 1798"],
+correctAnswer: 2
+
+},{
+
+question: "What does the name “Belize” mean?",
+answers: ["Muddy water", "Blue water", "Green River"],
+correctAnswer: 0
+
+},{
+
+question: "What is the highest elevation in the Cockscomb Range at 3,681 feet or 1,122 m high?",
+answers: ["The Falls", "Victoria Peak", "Mountain Pine Ridge"],
+correctAnswer: 1
+
+
+},{
+
+//     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
+//     answers: ["Sugarcane", "Mahogany", "Logwood"],
+//     correctAnswer: 2
+
+// },{
+
+//     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
+//     answers: ["Sugarcane", "Mahogany", "Logwood"],
+//     correctAnswer: 2
+
+// },{
+
+//     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
+//     answers: ["Sugarcane", "Mahogany", "Logwood"],
+//     correctAnswer: 2
+
+// },{
+
+//     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
+//     answers: ["Sugarcane", "Mahogany", "Logwood"],
+//     correctAnswer: 2
+
 
 }];
   
@@ -153,14 +215,12 @@ correctAnswer: 1
   //Start Answer 
   var selections = []; 
 
-  //Questions array
-  //var questionIndexArray = [];
-
   //QUESTION Limit
 
   const ROUNDS = 5;
   const answeredQuestions = [];
 
+  // answeredQuestions.length-1
 
   // Display initial question
   
@@ -184,15 +244,16 @@ correctAnswer: 1
   });
   
   // Click handler for the 'back' button
-  $('#back').on('click', function () {
+  // $('#back').on('click', function () {
 
-    if(quiz.is('playing')) {
-      return false;
-    }
-    choose();
-    questionCounter--;
-    displayNext();
-  });
+  //   if(quiz.is('playing')) {
+  //     return false;
+  //   }
+  //   choose();
+  //   questionCounter --;
+  //   displayNext();
+  //   // displayQuestion();
+  // });
   
   // Click handler for the 'Start Over' button
   $('#start').on('click', function () {

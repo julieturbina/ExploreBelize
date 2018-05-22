@@ -35,13 +35,14 @@ body {
 
 
 #container {
-    width:30%;
+    background-color:  aqua;
+    width:35%;
     margin:auto;
     padding: 25px 25px 40px 25px;
     /* background-color: rgba(3, 17, 213, 0.974); */ 
     border:10px solid aqua, 0.1;
     border-radius:25px;
-    color: yellow;
+    color: blue;
     font-weight: bold;
     /* box-shadow: 5px 25px 100px rgb(255, 255, 255); */
 }
