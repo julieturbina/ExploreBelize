@@ -5,6 +5,8 @@ background-image: url("../game-1a/island.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+margin: 0;
+height: 805px;
 }
 .player1{
 background-image: url("../game-1a/Caribbean-Belize_Island.jpg");
@@ -17,7 +19,7 @@ background-image: url("../game-1a/blue-hole.jpeg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-height: 600px;
+height: 500px;
 }
 
 .mPbutton{
@@ -95,8 +97,15 @@ ul {
 
 }
 
-.playerTwo{
-    margin-bottom: -9px;
+.player   {
+    background-color: aqua;
+    color: rgb(7, 7, 255);
+    border:1px solid;
+    border-radius:50px;
+    height: 80px;
+    width: 150px;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 /* ======================== */
@@ -122,6 +131,11 @@ ul {
     height: 50px;
     border-radius: 25%;
     position: center;
+}
+
+#foot{
+    background-color: 0, 255, 255, 0.2;
+
 }
 
 
@@ -243,8 +257,7 @@ filter: alpha(opacity=25);
 
 }
 
-.foot{
-background-color: rgb(41, 255, 251, 0.2);
+#flag{
 margin: 0px;
 background-position: center;
 background-repeat: no-repeat;
