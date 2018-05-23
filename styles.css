@@ -41,7 +41,6 @@ body {
     width:35%;
     margin:auto;
     padding: 25px 25px 40px 25px;
-    /* background-color: rgba(3, 17, 213, 0.974); */ 
     border:10px solid aqua, 0.1;
     border-radius:25px;
     color: blue;
@@ -81,7 +80,7 @@ body {
 }
 
 .button.active {
-    background-color: rgb(21, 10, 226);
+    background-color: yellow;
     color: rgb(255, 255, 255);
 }
 
