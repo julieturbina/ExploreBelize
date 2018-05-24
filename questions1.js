@@ -84,13 +84,13 @@
   
   },{
   
-    question: "Who was the first Governor General of independent Belize??",
+    question: "Who was the first Governor General of independent Belize?",
     answers: ["Colville Young", "George Price", "Minita Gordon"],
     correctAnswer: 2
   
   },{
   
-    question: "What is the official language of Belize",
+    question: "What is the official language of Belize?",
     answers: ["Spanish", "French", "English"],
     correctAnswer: 2
   
@@ -121,7 +121,7 @@
   },{
   
   question: "After logwood declined, the settlers in Belize harvested what other product?",
-  answers: ["Sugarcane", "Mahogany", "Logwood"],
+  answers: ["Sugarcane", "Mahogany", "Oak"],
   correctAnswer: 1
   
   },{
@@ -138,37 +138,12 @@
   
   },{
   
-  question: "What is the highest elevation in the Cockscomb Range at 3,681 feet or 1,122 m high?",
+  question: "What is the highest elevation in the Cockscomb Range?",
   answers: ["The Falls", "Victoria Peak", "Mountain Pine Ridge"],
   correctAnswer: 1
   
-  
-  // },{
-  
-  //     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
-  //     answers: ["Sugarcane", "Mahogany", "Logwood"],
-  //     correctAnswer: 2
-  
-  // },{
-  
-  //     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
-  //     answers: ["Sugarcane", "Mahogany", "Logwood"],
-  //     correctAnswer: 2
-  
-  // },{
-  
-  //     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
-  //     answers: ["Sugarcane", "Mahogany", "Logwood"],
-  //     correctAnswer: 2
-  
-  // },{
-  
-  //     question: "In the early 1700s, what made Belize the wealthiest British settlement in the Caribbean?",
-  //     answers: ["Sugarcane", "Mahogany", "Logwood"],
-  //     correctAnswer: 2
-  
-  
   }];
+
 // ======Start Game========
 
    //Start game 
@@ -185,7 +160,6 @@
   const ROUNDS = 5;
   const answeredQuestions = [];
 
-  // answeredQuestions.length-1
 
   // Display initial question
   

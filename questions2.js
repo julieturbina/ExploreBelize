@@ -51,17 +51,6 @@ function calculateScore(){
     alert("Thank you for playing!!!");
 }
 
-// 6.  Compare the scores for game 2 to announce the winner! No customized message will be issued as a total of 19 questions will be issued and as soon as a player scores 10, the game will end.
-
-// ==================
-
-//  I am a Belizean  >= 8 "You really are a Belizean"
-//  I have been to Belize >=6 "You are almost a Belizean
-//  I have never been to Belize >= 5 "You could be a Belizean
-//  Your quesses were good.
-// } else{
-//     Come to explore Belize
-
 // ========Answers========
 
  function answerFalse(){
