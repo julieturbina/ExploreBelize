@@ -1,7 +1,7 @@
 /* Main Page, Page-1 Player, Page 2-Player */
 
 .mainPage{
-background-image: url("../game-1a/island.jpg");
+background-image: url("island.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -9,13 +9,13 @@ margin: 0;
 height: 805px;
 }
 .player1{
-background-image: url("../game-1a/Caribbean-Belize_Island.jpg");
+background-image: url("Caribbean-Belize_Island.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
 .player2{
-background-image: url("../game-1a/blue-hole.jpeg");
+background-image: url("blue-hole.jpeg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
